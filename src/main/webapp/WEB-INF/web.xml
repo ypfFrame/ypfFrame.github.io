@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <display-name>ypf-frame</display-name>
+
+    <listener>
+        <description>服务启动停止监听器，启动，停止调用该监听中两个方法</description>
+        <listener-class>cn.ypf88.frame.listeners.ServletContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>mainServlet</servlet-name>
+        <servlet-class>cn.ypf88.frame.servlets.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>
+        <url-pattern>*.json</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>
+        <url-pattern>*.xml</url-pattern>
+    </servlet-mapping>
+</web-app>
